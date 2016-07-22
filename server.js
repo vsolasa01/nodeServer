@@ -4,6 +4,7 @@
 var express=require('express');
 var app=express();
 
+var port=Number(process.env.PORT||9999);
 
 app.get('/',function(req,res){
     res.send("Hello World");
@@ -14,5 +15,5 @@ app.get('/first',function(req,res){
 });
 
 
-app.listen('9999');
-console.log("server is running on port number 9999");
+app.listen(port);
+console.log("server is running on port number "+port);
